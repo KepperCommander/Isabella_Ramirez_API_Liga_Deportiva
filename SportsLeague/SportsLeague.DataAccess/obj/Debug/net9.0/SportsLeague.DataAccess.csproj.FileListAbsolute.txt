@@ -1,0 +1,17 @@
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLeague.DataAccess.csproj.AssemblyReference.cache
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLeague.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLeague.DataAccess.AssemblyInfoInputs.cache
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLeague.DataAccess.AssemblyInfo.cs
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLeague.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\bin\Debug\net9.0\SportsLeague.DataAccess.deps.json
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\bin\Debug\net9.0\SportsLeague.DataAccess.runtimeconfig.json
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\bin\Debug\net9.0\SportsLeague.DataAccess.dll
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\bin\Debug\net9.0\SportsLeague.DataAccess.pdb
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\bin\Debug\net9.0\SportsLeague.Domain.dll
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\bin\Debug\net9.0\SportsLeague.Domain.pdb
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLe.95752F64.Up2Date
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLeague.DataAccess.dll
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\refint\SportsLeague.DataAccess.dll
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLeague.DataAccess.pdb
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\SportsLeague.DataAccess.genruntimeconfig.cache
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.DataAccess\obj\Debug\net9.0\ref\SportsLeague.DataAccess.dll

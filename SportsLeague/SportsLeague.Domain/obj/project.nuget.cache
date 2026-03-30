@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "nJKOvS7fT4s=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\isara\\source\\repos\\KepperCommander\\Isabella_Ramirez_API_Liga_Deportiva\\SportsLeague\\SportsLeague.Domain\\SportsLeague.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\isara\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.5\\microsoft.extensions.dependencyinjection.abstractions.10.0.5.nupkg.sha512",
+    "C:\\Users\\isara\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.5\\microsoft.extensions.logging.abstractions.10.0.5.nupkg.sha512",
+    "C:\\Users\\isara\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.5\\system.diagnostics.diagnosticsource.10.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
