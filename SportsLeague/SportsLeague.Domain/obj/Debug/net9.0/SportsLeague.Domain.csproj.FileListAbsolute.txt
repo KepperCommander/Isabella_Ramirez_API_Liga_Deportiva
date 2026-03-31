@@ -10,3 +10,4 @@ C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.Domain\obj\Debug\net9.0\refint\SportsLeague.Domain.dll
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.Domain\obj\Debug\net9.0\SportsLeague.Domain.pdb
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.Domain\obj\Debug\net9.0\ref\SportsLeague.Domain.dll
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.Domain\obj\Debug\net9.0\SportsLeague.Domain.sourcelink.json
