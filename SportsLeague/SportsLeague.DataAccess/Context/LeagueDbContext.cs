@@ -7,25 +7,17 @@ namespace SportsLeague.DataAccess.Context;
 
 
 public class LeagueDbContext : DbContext
-
 {
-
-    public LeagueDbContext(DbContextOptions<LeagueDbContext> options)
-
-    : base(options)
-
-    {
-
-    }
-
+    public LeagueDbContext(DbContextOptions<LeagueDbContext> options): base(options)
+    {    }
 
     public DbSet<Team> Teams => Set<Team>();
     public DbSet<Player> Players => Set<Player>();
     public DbSet<Referee> Referees => Set<Referee>(); 
-
     public DbSet<Tournament> Tournaments => Set<Tournament>();
-
     public DbSet<TournamentTeam> TournamentTeams => Set<TournamentTeam>();
+    public DbSet<Sponsor> Sponsors => Set<Sponsor>();
+    public DbSet<TournamentSponsor> TournamentSponsors => Set<TournamentSponsor>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
 
@@ -172,17 +164,8 @@ public class LeagueDbContext : DbContext
 
             entity.HasKey(t => t.Id);
 
-            entity.Property(t => t.Name)
-
-            .IsRequired()
-
-            .HasMaxLength(150);
-
-            entity.Property(t => t.Season)
-
-            .IsRequired()
-
-            .HasMaxLength(20);
+            entity.Property(t => t.Name).IsRequired().HasMaxLength(150);
+            entity.Property(t => t.Season).IsRequired().HasMaxLength(20);
 
             entity.Property(t => t.StartDate)
 
@@ -255,6 +238,55 @@ public class LeagueDbContext : DbContext
 
         });
 
+
+
+
+
+        //parte del parcial
+
+        modelBuilder.Entity<Sponsor>(entity =>
+        {
+            entity.HasKey(t => t.Id);
+
+            //regla nombre unico
+            entity.HasIndex(t => t.Name).IsUnique();
+
+            entity.Property(t => t.Name).IsRequired().HasMaxLength(150);
+            entity.Property(t => t.ContactEmail).IsRequired().HasMaxLength(150);
+            entity.Property(t => t.Phone).IsRequired().HasMaxLength(20);
+            entity.Property(t => t.WebsiteUrl).IsRequired().HasMaxLength(300);
+            entity.Property(t => t.Category).IsRequired();
+            entity.Property(t => t.CreatedAt).IsRequired();
+            entity.Property(t => t.UpdatedAt).IsRequired(false);
+
+        });
+
+        modelBuilder.Entity<TournamentSponsor>(entity =>
+        {
+            entity.HasKey(t => t.Id);
+
+            //regla de indice unico compuesto
+            entity.HasIndex(ts => new { ts.TournamentId, ts.SponsorId }).IsUnique();
+
+            entity.Property(t => t.TournamentId).IsRequired();
+            entity.Property(t => t.SponsorId).IsRequired();
+            entity.Property(t => t.ContractAmount).IsRequired().HasColumnType("decimal(18,2)");
+            entity.Property(t => t.JoinedAt).IsRequired();
+            entity.Property(t => t.CreatedAt).IsRequired();
+            entity.Property(t => t.UpdatedAt).IsRequired(false);
+
+            // Relaciones
+            entity.HasOne(ts => ts.Tournament)
+                  .WithMany(t => t.TournamentSponsors)
+                  .HasForeignKey(ts => ts.TournamentId)
+                  .OnDelete(DeleteBehavior.Cascade); 
+
+            entity.HasOne(ts => ts.Sponsor)
+                  .WithMany(s => s.TournamentSponsors)
+                  .HasForeignKey(ts => ts.SponsorId)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+        });
     }
 
 }

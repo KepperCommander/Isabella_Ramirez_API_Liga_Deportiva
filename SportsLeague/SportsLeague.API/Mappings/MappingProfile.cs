@@ -43,6 +43,7 @@ public class MappingProfile : Profile
         CreateMap<Referee, RefereeResponseDTO>();
 
 
+
         // Tournament mappings
 
         CreateMap<TournamentRequestDTO, Tournament>();
@@ -56,6 +57,14 @@ public class MappingProfile : Profile
         opt => opt.MapFrom(src =>
 
         src.TournamentTeams != null ? src.TournamentTeams.Count : 0));
+
+        CreateMap<TournamentSponsor, TournamentSponsorResponseDTO>()
+    .ForMember(dest => dest.TournamentName, opt => opt.MapFrom(src => src.Tournament != null ? src.Tournament.Name : string.Empty))
+    .ForMember(dest => dest.SponsorName, opt => opt.MapFrom(src => src.Sponsor != null ? src.Sponsor.Name : string.Empty));
+
+        // Sponsor Mappings
+        CreateMap<SponsorRequestDTO, Sponsor>();
+        CreateMap<Sponsor, SponsorResponseDTO>();
 
     }
 
