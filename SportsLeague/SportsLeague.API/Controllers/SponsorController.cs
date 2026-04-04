@@ -72,7 +72,7 @@ public class SponsorController : ControllerBase
         catch (KeyNotFoundException ex) { return NotFound(new { message = ex.Message }); } // 404
     }
 
-    
+  
 
     [HttpGet("{id}/tournaments")]
     public async Task<ActionResult<IEnumerable<TournamentResponseDTO>>> GetTournaments(int id)
@@ -80,9 +80,9 @@ public class SponsorController : ControllerBase
         try
         {
             var tournaments = await _sponsorService.GetTournamentsBySponsorAsync(id);
-            return Ok(_mapper.Map<IEnumerable<TournamentResponseDTO>>(tournaments)); // 200
+            return Ok(_mapper.Map<IEnumerable<TournamentResponseDTO>>(tournaments)); 
         }
-        catch (KeyNotFoundException ex) { return NotFound(new { message = ex.Message }); } // 404
+        catch (KeyNotFoundException ex) { return NotFound(new { message = ex.Message }); } 
     }
 
     [HttpPost("{id}/tournaments")]
@@ -91,10 +91,10 @@ public class SponsorController : ControllerBase
         try
         {
             await _sponsorService.RegisterSponsorToTournamentAsync(id, dto.TournamentId, dto.ContractAmount);
-            return StatusCode(201, new { message = "Sponsor vinculado al torneo" }); // 201
+            return StatusCode(201, new { message = "Sponsor vinculado al torneo" }); 
         }
-        catch (KeyNotFoundException ex) { return NotFound(new { message = ex.Message }); } // 404
-        catch (InvalidOperationException ex) { return Conflict(new { message = ex.Message }); } // 409
+        catch (KeyNotFoundException ex) { return NotFound(new { message = ex.Message }); } 
+        catch (InvalidOperationException ex) { return Conflict(new { message = ex.Message }); } 
     }
 
     [HttpDelete("{id}/tournaments/{tid}")]
@@ -105,6 +105,6 @@ public class SponsorController : ControllerBase
             await _sponsorService.RemoveSponsorFromTournamentAsync(id, tid);
             return NoContent(); // 204
         }
-        catch (KeyNotFoundException ex) { return NotFound(new { message = ex.Message }); } // 404
+        catch (KeyNotFoundException ex) { return NotFound(new { message = ex.Message }); } 
     }
 }
