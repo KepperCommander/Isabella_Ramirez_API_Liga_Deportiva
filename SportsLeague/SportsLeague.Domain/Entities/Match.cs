@@ -18,4 +18,9 @@ public class Match : AuditBase
     public Team HomeTeam { get; set; } = null!;
     public Team AwayTeam { get; set; } = null!;
     public Referee Referee { get; set; } = null!;
+    public MatchResult? MatchResult { get; set; }
+
+
+    public ICollection<Goal> Goals { get; set; } = new List<Goal>();
+    public ICollection<Card> Cards { get; set; } = new List<Card>();
 }
