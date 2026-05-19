@@ -158,10 +158,10 @@ C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\SportsLe.F9D9D8DC.Up2Date
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\SportsLeague.API.dll
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\refint\SportsLeague.API.dll
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\SportsLeague.API.pdb
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\SportsLeague.API.genruntimeconfig.cache
 C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\ref\SportsLeague.API.dll
+C:\Users\isara\source\repos\KepperCommander\Isabella_Ramirez_API_Liga_Deportiva\SportsLeague\SportsLeague.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
