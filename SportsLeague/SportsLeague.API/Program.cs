@@ -9,6 +9,7 @@ using SportsLeague.Domain.Interfaces.Repositories;
 using SportsLeague.Domain.Interfaces.Services;
 
 using SportsLeague.Domain.Services;
+using SportsLeague.DataAccess.Seeders;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -48,6 +49,7 @@ builder.Services.AddScoped<ISponsorService, SponsorService>();
 builder.Services.AddScoped<IMatchService, MatchService>();
 builder.Services.AddScoped<IMatchEventService, MatchEventService>();
 builder.Services.AddScoped<MatchValidationHelper>();
+builder.Services.AddScoped<IStandingsService, StandingsService>();
 
 // ?? AutoMapper ??
 
@@ -67,6 +69,24 @@ builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
+
+// ?? Data Seeder ?? 
+
+using (var scope = app.Services.CreateScope())
+
+{
+
+    var context = scope.ServiceProvider
+
+        .GetRequiredService<LeagueDbContext>();
+
+
+
+    await context.Database.MigrateAsync(); // Crea la BD + aplica migraciones 
+
+    await DataSeeder.SeedAsync(context);
+
+}
 
 
 // ?? Middleware Pipeline ??

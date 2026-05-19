@@ -786,6 +786,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SportsLeague.API.Controllers.StandingsController",
+    "Method": "GetStandings",
+    "RelativePath": "api/standings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tournamentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SportsLeague.API.Controllers.StandingsController",
+    "Method": "GetCardStats",
+    "RelativePath": "api/stats/cards",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tournamentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SportsLeague.API.Controllers.StandingsController",
+    "Method": "GetTopScorers",
+    "RelativePath": "api/stats/scorers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tournamentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SportsLeague.API.Controllers.TeamController",
     "Method": "GetAll",
     "RelativePath": "api/Team",
