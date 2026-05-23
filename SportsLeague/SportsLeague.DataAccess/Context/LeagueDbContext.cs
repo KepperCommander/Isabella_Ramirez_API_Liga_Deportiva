@@ -22,6 +22,7 @@ public class LeagueDbContext : DbContext
     public DbSet<MatchResult> MatchResults => Set<MatchResult>();
     public DbSet<Goal> Goals => Set<Goal>();
     public DbSet<Card> Cards => Set<Card>();
+    public DbSet<MatchLineup> MatchLineups => Set<MatchLineup>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
 
@@ -486,6 +487,42 @@ public class LeagueDbContext : DbContext
 
                   .OnDelete(DeleteBehavior.Restrict);
 
+        });
+
+        modelBuilder.Entity<MatchLineup>(entity =>
+        {
+            entity.HasKey(ml => ml.Id);
+
+            entity.Property(ml => ml.Position)
+                  .IsRequired()
+                  .HasMaxLength(20);   // "GK", "CB", "CDM", "ST", etc.
+
+            entity.Property(ml => ml.IsStarter)
+                  .IsRequired();
+
+            entity.Property(ml => ml.CreatedAt)
+                  .IsRequired();
+
+            entity.Property(ml => ml.UpdatedAt)
+                  .IsRequired(false);
+
+            // Relación N:1 con Match ? eliminar partido elimina sus alineaciones
+            entity.HasOne(ml => ml.Match)
+                  .WithMany(m => m.Lineups)         
+                  .HasForeignKey(ml => ml.MatchId)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            // Relación N:1 con Player ? Restrict para no borrar jugadores en cascada
+            entity.HasOne(ml => ml.Player)
+                  .WithMany()
+                  .HasForeignKey(ml => ml.PlayerId)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            // ?? Índice único compuesto (misma técnica que TournamentTeam) ??????
+            // Garantiza a nivel BD que un jugador no pueda registrarse dos veces
+            // en el mismo partido, incluso si falla la validación del Service (V4).
+            entity.HasIndex(ml => new { ml.MatchId, ml.PlayerId })
+                  .IsUnique();
         });
 
 
